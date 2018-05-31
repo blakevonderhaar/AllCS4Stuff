@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<!--
+	Shows use of adding an item with jQuery
+	Shows use of change text with each()
+	Shows use of attr() function
+
+-->
+
+	<head>
+		<title>Third jQuery Ex</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js">
+
+		</script>
+	</head>
+	<body>
+		<h1>Adding HTML</h1>
+		<table id="theTable" border="1">
+			<tr>
+				<th>Airport Code</th>
+				<th>Common Name/City</th>
+			</tr>
+			<tr>
+				<td>SD1</td>
+				<td>San Diego Airport</td>
+			</tr>
+		</table>
+		<ul id="aList">
+			<li>Here is 1</li>
+			<li>Here is 2</li>
+		</ul>
+		<ul id="theList">
+			<li>Here is 1</li>
+			<li>Here is 2</li>
+		</ul>
+
+		<script type="text/javascript">
+			$(document).ready(
+				function() {
+
+					alert($("#theTable").attr("border"));
+					$("#theTable").attr("border","5");
+
+					$("#aList").append("<li>Here is 3</li>");
+
+					$("#theList li").each(
+						function() 
+						{
+							var existingText = $(this).text().substr(8,1);
+							$(this).text("Item " + existingText);
+						}
+					);
+
+				}
+
+
+			);
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

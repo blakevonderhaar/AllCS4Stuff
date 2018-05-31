@@ -1,0 +1,8 @@
+This project: 2.3.A
+Refers to Chapter 2: Basics
+       	  Section 3: V-Directives
+	  Example A: Declarative Rendering
+
+Description: Prerequisite for V-Directives and seeing how Vue binds the data to the DOM, making it reactive.
+
+References: https://vuejs.org/v2/guide/index.html#Declarative-Rendering

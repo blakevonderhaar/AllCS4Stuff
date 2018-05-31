@@ -1,0 +1,117 @@
+Bring up command prompt and go to project folder.
+
+You can start the server by doing either
+>node bin/www
+or
+>npm start
+
+==================================
+
+Go to heroku.com to and create an account.
+
+If you have admin privileges go to https://toolbelt.heroku.com
+and download heroku-cli-x64.exe and run it.  This will install heroku toolbelt and Git.
+
+or if you do not have admin privileges then you will have to "jimmy rig" heroku toolbelt by
+copying the Heroku and Git folders that are provided.
+
+
+>set PATH=%PATH%;full_path_to_git\Git\cmd;full_path_to_heroku\Heroku\bin
+
+>git config --system http.sslcainfo "full_path_to_git\Git\mingw64\ssl\certs\ca-bundle.crt"
+
+===================================
+
+Upload your web app to the heroku web host.
+
+Bring up command prompt and go to project folder.
+
+>heroku login
+
+>git init
+
+>git add .
+
+>git commit -m "First commit"
+
+>heroku create
+
+Save the url path that is provided.
+Ex)   https://fathomless-dusk-52926.herokuapp.com
+
+
+>git push heroku master
+
+The above pushes the code to heroku so now you can go to a browser and run the web app live
+by putting in the url path from the heroku create command.
+
+====================================
+
+After making changes to your web app, you can push up your latest code by doing the following.
+
+Bring up command prompt and go to project folder.
+
+>git add .
+>git commit -m "Another change"
+>git push heroku master
+
+
+
+
+
+
+
+
+
+
+
+=================================
+When setting up your own web app, you need to copy and modify the folders and files
+bin, .gitignore, Procfile, package.json, app.js
+
+.gitignore - the folders and files for git to ignore for commits.
+----
+
+Procfile - used for heroku.
+web: npm start   - npm start is the command that will be executed to start the web server.
+
+----
+
+package.json - important to have 
+
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+
+because npm start will look for this in the package.json file to determine how to start the server.
+
+Also important to have dependencies since node_modules was not uploaded to heroku.
+
+------
+
+bin/www - generated using   exppress-generator
+
+make sure app matches app.js or change to match ????.js
+
+not sure if need to change var debug .....    line of code
+
+where did bin/www come from???
+
+create a express project template by typing in a command prompt
+express -help
+express --view=ejs  myapp
+cd myapp
+npm install
+npm start
+
+in browser type for url    localhost:3000
+
+
+
+
+
+
+
+
+
+

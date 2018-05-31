@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mongoose": "~4.6.3",
+    "promise": "^8.0.1"
+  }
+}

@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Hello</title>
+</head>
+<body>
+	<script type="text/javascript">
+	let text = '{"people" : ['+ '{"firstname":"Bob","lastname":"Doe"},'+
+	'{"firstname":"Billy","lastname":"Dove"},'+
+	'{"firstname":"Joe","lastname":"Buddy"},'+
+	'{"firstname":"Nate","lastname":"Guy"}]}';
+	    let obj = JSON.parse(text);
+	    alert("hello " + obj.people[1].firstname);
+
+	    let obj2 = {x:5,y:6};
+	    let str = JSON.stringify(obj2);
+	    alert(str);
+
+	    obj = JSON.parse(str);
+	    alert("hello "+obj.y);
+
+	</script>
+
+</body>
+</html>

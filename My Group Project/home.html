@@ -1,0 +1,472 @@
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+
+	  a:hover {
+		color: white;
+		border-bottom: 1px solid white;
+		text-decoration: underline;
+		}
+
+		.create:hover {
+		color: black;
+		border-bottom: 1px solid white;
+		text-decoration: line-through;
+		background-color: rgb(7, 43, 99)
+		}
+		.headerColor {
+		background-color: rgb(7, 43, 99)
+		}
+		#img1:hover{
+			outline-style: double;
+		}
+		#img2:hover{
+			outline-style: double;
+		}
+		#img3:hover{
+			outline-style: double;
+		}
+		#img4:hover{
+			outline-style: double;
+		}
+		#img5:hover{
+			outline-style: double;
+		}
+		#img6:hover{
+			outline-style: double;
+		}
+		#movethis:hover{
+			outline-style: double;
+		}
+		#movethis2:hover{
+			outline-style: double;
+		}
+		#movethis3:hover{
+			outline-style: double;
+		}
+
+		/* Standard syntax */
+		@keyframes mymoveright {
+    	from {left: 0px;}
+    	to {left: 200px;}
+		}
+
+		@keyframes mymoveleft {
+    	from {left: 0px;}
+    	to {left: -200px;}
+		}
+		@keyframes fadeout {
+	  0% { opacity: 1	}
+	  100% { opacity: 0 }
+		}
+		@keyframes fadein {
+	  0% { opacity: 0	}
+	  100% { opacity: 1 }
+		}
+
+		.container{
+			position: absolute;
+			margin-left: 36%;
+		}
+		#buttonOnRight{
+			position: absolute;
+			margin-top: -33%;
+			margin-left: 94.4%;
+		}
+		#buttonOnLeft{
+			position: absolute;
+			margin-top: -33%;
+		}
+
+		}
+
+
+
+	</style>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+			<div class = "headerColor" >
+			<input style="margin-top:2%;margin-left:5%;text-align:left;text-align:top;float:left;color:white;font-size"  type="image" src="./images/agorayee.jpg">
+  		<select name="groups" style="margin-left:2vw;margin-top: 3.5vw;vertical-align: 30%;	padding-top:.1%;padding-bottom:.1%;background-color:rgb(7, 43, 99)border-color:black;">
+	 		<option value="stuff1">All</option>
+	 		<option value="stuff2">Stuff2</option>
+	 		<option value="stuff3">Stuff3</option>
+	 		<option value="stuff4">Stuff4</option>
+		<input type="text" value="Search For Anything" style="padding-right:45%;margin-top: 3vw;vertical-align: 20%;">
+		<input type="image" src="search.png" width="1.25%" onclick="doSomething">
+		<a href="url" class="login" style="float:right;margin-top:9;margin-right:3%;font-size:20px;	color:white; text-decoration: none;" onclick="logIn" href="">Log In</a>
+
+		<br>
+		<br>
+		<br>
+
+		<a href="url" class="create" style="color:white; text-decoration: none;float:left;font-size:15px;margin-left:2.5%;background-color:rgb(7, 43, 99)">Today's Deals</a>
+		<a href="url" class="create" style="color:white; text-decoration: none;	float:left;font-size:15px;margin-left:5%;background-color:rgb(7, 43, 99)">Trending</a>
+		<a href="url" class="create" style="color:white; text-decoration: none;float:left;font-size:15px;margin-left:5%;background-color: rgb(7, 43, 99)">Recommended</a>
+		<a href="url" class="create" style="color:white; text-decoration: none;float:left;font-size:15px;margin-left:5%;background-color: rgb(7, 43, 99)">Help</a>
+		<br>
+		<hr>
+</div>
+<br>
+<br>
+
+<div class="container">
+<input type="image" src="./images/ad1.jpg" style="border-radius:25px;" onclick="" width="500" height="300" id="bigpic">
+<button id="buttonOnLeft"  onclick="" ><</button>
+<button id="buttonOnRight" onclick="" >></button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="somethin" style="margin-left:30%;">
+	<p style="font-weight:bold;font-size:25px">Specials</p>
+<input id="scrollLeft3" type = "button" value="<" style="vertical-align:400%;">
+<input type="image" src="./images/ci_sampler.jpg"  onclick="" width="200" height="200" id="movethis" class="remove">
+<input type="image" src="./images/frwhspa_1.jpg"  onclick="" width="200" height="200" id="movethis2" class="remove">
+<input type="image" src="./images/sista_brotha_comp_1.jpg" onclick=""  width="200" height="200" id="movethis3" class="remove">
+<input id="scrollRight3" type = "button" value=">" style="vertical-align:400%">
+</div>
+
+
+<div style="margin-left:30%">
+	<p style="font-weight:bold;font-size:25px">Todays Deals</p>
+<input id="scrollLeft" type = "button" value="<" style="vertical-align:400%">
+<input type="image" src="" onclick="" width="200" height="200" id="img1" >
+<input type="image" src="" onclick="" width="200" height="200" id="img2">
+<input type="image" src="" onclick="" width="200" height="200" id="img3">
+<input id="scrollRight" type = "button" value =">" style="vertical-align:400%">
+</div>
+<br>
+
+
+
+
+
+<script>
+		var images = [{name:"./images/ci_sampler.jpg"},{name: "./images/frwhspa_1.jpg" },
+		{name:"./images/firewire-surfboards-round-nose-fish-tt-510-futures.jpg"},
+		{name:"./images/firewire_main.jpg"},{name:"./images/sista_brotha_comp_1.jpg"}];
+		let currImgStart = 0;
+		var imagesLength = 4;
+
+		var images2 = [{name:"./images/csgo.jpg"},{name:"./images/fortnite.jpg"},
+		{name:"./images/minecraft.jpg"}, {name:"./images/pubg.jpg"}, {name:"./images/roblox.jpg"}];
+		let currImgStart2 = 0;
+
+		$("#img1").attr("src",images[0].name);
+		$("#img2").attr("src",images[1].name);
+		$("#img3").attr("src",images[2].name);
+		$("#img4").attr("src",images2[0].name);
+		$("#img5").attr("src",images2[1].name);
+		$("#img6").attr("src",images2[2].name);
+		$("#movethis").attr("src",images[0].name);
+		$("#movethis2").attr("src",images[1].name);
+		$("#movethis3").attr("src",images[2].name);
+
+
+		let currPos2 = 0;
+		let canMove2 = true;
+		let movepic2 = 3;
+
+		function rightPopular(){
+			if(canMove2){
+				if(movepic2 <= 0){
+					movepic2 = 3;
+				}
+				canMove2 = false;
+			$("#img1").css("position", "relative ");
+			$("#img1").css("animation", "mymoveright .25s 1");
+			$("#img1").css("animation-fill-mode", "forwards");
+
+			$("#img2").css("position", "relative ");
+			$("#img2").css("animation", "mymoveright .25s 1");
+			$("#img2").css("animation-fill-mode", "forwards");
+
+			$("#img3").css("position", "relative ");
+			$("#img3").css("animation", "mymoveright .25s 1");
+			$("#img3").css("animation-fill-mode", "forwards");
+
+			if(movepic2 == 3)
+				$("#img3").css("opacity", "0.0");
+			else if(movepic2 == 2)
+				$("#img2").css("opacity", "0.0");
+			else if (movepic2 == 1)
+				$("#img1").css("opacity", "0.0");
+
+
+     setTimeout(function(){
+			 if(movepic2 == 3){
+				 $("#img3").css("opacity", "1.0");
+  			 $("#img3").css("transform", "translate(-410px)");
+				 $("#img1").css("transform","translate(205px)");
+				 $("#img2").css("transform","translate(205px)");
+			 }else if (movepic2 == 2){
+				 $("#img2").css("opacity", "1.0");
+  			 $("#img2").css("transform", "translate(-205px)");
+				 $("#img1").css("transform","translate(410px)");
+				 $("#img3").css("transform","translate(-205px)");
+			 }else {
+				 $("#img1").css("opacity", "1.0");
+  			 $("#img1").css("transform", "translate(0)");
+				 $("#img3").css("transform","translate(0)");
+				 $("#img2").css("transform","translate(0)");
+			 }
+			 movepic2--;
+       $("#img1").css("animation", "none");
+			 $("#img2").css("animation", "none");
+			 $("#img3").css("animation", "none");
+			 canMove2 = true;
+    },150);
+	}
+	}
+
+		function leftPopular(){
+			if(canMove2){
+			canMove2 = false;
+			$("#img1").css("position", "relative ");
+			$("#img1").css("animation", "mymoveleft .25s 1");
+			$("#img1").css("animation-fill-mode", "forwards");
+
+			$("#img2").css("position", "relative ");
+			$("#img2").css("animation", "mymoveleft .25s 1");
+			$("#img2").css("animation-fill-mode", "forwards");
+
+			$("#img3").css("position", "relative ");
+			$("#img3").css("animation", "mymoveleft .25s 1");
+			$("#img3").css("animation-fill-mode", "forwards");
+
+			if(movepic2 == 3)
+				$("#img1").css("opacity", "0.0");
+			else if(movepic2 == 2)
+				$("#img3").css("opacity", "0.0");
+			else if (movepic2 == 1)
+				$("#img2").css("opacity", "0.0");
+
+		 setTimeout(function(){
+			 if(movepic2 == 3){
+				 $("#img1").css("opacity", "1.0");
+				 $("#img1").css("transform","translate(410px)");
+				 $("#img2").css("transform","translate(-205px)");
+				 $("#img3").css("transform", "translate(-205px)");
+			 }else if(movepic2 == 1){
+				 $("#img2").css("opacity", "1.0");
+				 $("#img1").css("transform","translate(205px)");
+				 $("#img2").css("transform","translate(205px)");
+				 $("#img3").css("transform", "translate(-410px)");
+			 }else if(movepic2 == 2){
+				 $("#img3").css("opacity", "1.0");
+				 $("#img1").css("transform","translate(0)");
+				 $("#img2").css("transform","translate(0)");
+				 $("#img3").css("transform", "translate(0)");
+			 }
+
+			 $("#img1").css("animation", "none");
+			 $("#img2").css("animation", "none");
+			 $("#img3").css("animation", "none");
+			 movepic2++;
+
+			 if(movepic2 >= 4){
+				 movepic2 = 1;
+			 }
+			  canMove2 = true;
+		},150);
+	}
+	}
+
+		let currPosleft = 0;
+		let currPosright = 2;
+		let canMove = true;
+		let currImgOtherleft = 1;
+		let currImgOtherright = 3;
+
+		function rightOther(){
+			if(canMove){
+				canMove = false;
+			$("#movethis").css("position", "relative ");
+			$("#movethis").css("animation", "mymoveright .25s 1");
+			$("#movethis").css("animation-fill-mode", "forwards");
+
+			$("#movethis2").css("position", "relative ");
+			$("#movethis2").css("animation", "mymoveright .25s 1");
+			$("#movethis2").css("animation-fill-mode", "forwards");
+
+			$("#movethis3").css("position", "relative ");
+			$("#movethis3").css("animation", "mymoveright .25s 1");
+			$("#movethis3").css("animation-fill-mode", "forwards");
+
+			if(currImgOtherright == 3)
+				$("#movethis3").css("opacity", "0.0");
+			else if(currImgOtherright == 2)
+				$("#movethis2").css("opacity", "0.0");
+			else if (currImgOtherright == 1)
+				$("#movethis").css("opacity", "0.0");
+
+
+     setTimeout(function(){
+			 if(currImgOtherright == 3){
+				 $("#movethis3").css("opacity", "1.0");
+  			 $("#movethis3").css("transform", "translate(-410px)");
+				 $("#movethis").css("transform","translate(205px)");
+				 $("#movethis2").css("transform","translate(205px)");
+				 $("#movethis3").attr("src",images[currPos-1].name);
+			 }else if (currImgOtherright == 2){
+				 $("#movethis2").css("opacity", "1.0");
+  			 $("#movethis2").css("transform", "translate(-205px)");
+				 $("#movethis").css("transform","translate(410px)");
+				 $("#movethis3").css("transform","translate(-205px)");
+				 $("#movethis2").attr("src",images[currPos-1].name);
+			 }else {
+				 $("#movethis").css("opacity", "1.0");
+  			 $("#movethis").css("transform", "translate(0)");
+				 $("#movethis3").css("transform","translate(0)");
+				 $("#movethis2").css("transform","translate(0)");
+				 $("#movethis").attr("src",images[currPos-1].name);
+			 }
+			 movepic--;
+			 currImgOtherleft--;
+			 currImgOtherright--;
+			 currPos--;
+			 if(currPos<0){
+				 currPos = imagesLength;
+			 }
+			 if(currImgOtherright < 1){
+				 currImgOtherright = 3;
+			 }
+			 if(currImgOtherleft < 1){
+				 currImgOtherleft = 3;
+			 }
+       $("#movethis").css("animation", "none");
+			 $("#movethis2").css("animation", "none");
+			 $("#movethis3").css("animation", "none");
+			 canMove = true;
+    },150);
+	}
+	}
+
+		function leftOther(){
+			if(canMove){
+			canMove = false;
+			$("#movethis").css("position", "relative ");
+			$("#movethis").css("animation", "mymoveleft .25s 1");
+			$("#movethis").css("animation-fill-mode", "forwards");
+
+			$("#movethis2").css("position", "relative ");
+			$("#movethis2").css("animation", "mymoveleft .25s 1");
+			$("#movethis2").css("animation-fill-mode", "forwards");
+
+			$("#movethis3").css("position", "relative ");
+			$("#movethis3").css("animation", "mymoveleft .25s 1");
+			$("#movethis3").css("animation-fill-mode", "forwards");
+
+			if(currImgOtherleft == 3)
+				$("#movethis3").css("opacity", "0.0");
+			else if(currImgOtherleft == 2)
+				$("#movethis2").css("opacity", "0.0");
+			else if (currImgOtherleft == 1)
+				$("#movethis").css("opacity", "0.0");
+
+		 setTimeout(function(){
+			 if(currImgOtherleft == 1){
+				 $("#movethis").css("opacity", "1.0");
+				 $("#movethis").css("transform","translate(410px)");
+				 $("#movethis2").css("transform","translate(-205px)");
+				 $("#movethis3").css("transform", "translate(-205px)");
+				 $("#movethis").attr("src",images[currPosright+1].name);
+			 }else if(currImgOtherleft == 3){
+				 $("#movethis3").css("opacity", "1.0");
+				 $("#movethis").css("transform","translate(0)");
+				 $("#movethis2").css("transform","translate(0)");
+				 $("#movethis3").css("transform", "translate(0)");
+				 $("#movethis3").attr("src", images[currPosright+1].name);
+			 }else if(currImgOtherleft == 2){
+				 $("#movethis2").css("opacity", "1.0");
+				 $("#movethis").css("transform","translate(205px)");
+				 $("#movethis2").css("transform","translate(205px)");
+				 $("#movethis3").css("transform", "translate(-410px)");
+				 $("#movethis2").attr("src",images[currPosright+1].name);
+			 }
+
+			 $("#movethis").css("animation", "none");
+			 $("#movethis2").css("animation", "none");
+			 $("#movethis3").css("animation", "none");
+			 currImgOtherleft++;
+			 currImgOtherright++;
+			 currPosright++;
+			 currPosleft++;
+ 			if(currPosright+1>imagesLength){
+ 				currPosright = -1;
+ 			}
+			 if(currImgOtherleft > 3){
+ 				currImgOtherleft = 1;
+ 			}
+ 			if(currImgOtherright > 3){
+ 				currImgOtherright = 1;
+ 			}
+			  canMove = true;
+		},150);
+	}
+	}
+
+	var images3 = [{name:"./images/ad1.jpg"},{name:"./images/sunset2.jpg"}];
+	var currimg3 = 0;
+	function addRight(){
+		currimg3++;
+		changePic();
+	}
+	function addLeft(){
+		currimg3--;
+		changePic();
+	}
+	function changePic(){
+		$("#bigpic").css("animation", "fadeout .15s linear");
+		setTimeout(function(){
+		$("#bigpic").css("animation", "fadein .15s linear");
+		$("#bigpic").attr("src",images3[currimg3].name);
+	},125);
+
+}
+
+		$(document).ready(function(){
+  		  $("#scrollLeft").click(leftPopular);
+				$("#scrollRight").click(rightPopular);
+				$("#scrollLeft3").click(leftOther);
+				$("#scrollRight3").click(rightOther);
+				$("#buttonOnRight").click(addRight);
+				$("#buttonOnLeft").click(addLeft);
+  		});
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

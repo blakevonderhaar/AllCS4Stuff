@@ -1,0 +1,37 @@
+
+Changing from local to a live database
+Creating the live database.
+1) Sign up at MongoLab for a free account.
+go to https://mlab.com  and follow directions.
+
+2)Create a new database.
+Go to https://mlab.com and login
+create new database by selecting create new.
+Select sandbox free and hit continue. choose us east region and hit continue.
+enter database name ???. (Name must be unique) submit order.
+
+3)Add a user
+To add a user, go to web site and click on the database
+click Users button and select Add database user.
+you will need to add username and password
+
+go to https://mlab.com and login and click on database to get the proper
+info to connect using the mongo shell. Example below.
+%mongo ds111111.mlab.com:11111/<database> -u <dbuser> -p <dbpassword>
+
+Below is the database URI (connection string)
+mongodb://<dbuser>:<dbpassword>@ds111111.mlab.com:11111/<database>
+
+
+====================
+
+in index.js we need to change the following code so that it uses the live database.
+
+// Connect to our mongo database
+//local database
+//mongoose.connect("mongodb://localhost/<database>");
+//live database
+mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds111111.mlab.com:11111/<database>");
+
+
+

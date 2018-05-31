@@ -1,0 +1,22 @@
+
+Make a copy of the simpleFullEx2 folder and name it simpleFullEx3.
+
+Change the index.js file
+
+Change the simpleFullEx.html file
+
+  
+
+In Eclipse right click on app.js and select Run As->Node Application or ....
+
+Go to browser and type the following url      localhost:3000
+Select the button named Request and an alert dialog box should come up with the name Jim in it.
+============================================================================================
+
+
+
+
+
+
+
+

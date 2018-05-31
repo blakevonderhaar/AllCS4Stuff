@@ -1,0 +1,9 @@
+
+how to upload a file to the server.
+https://www.w3schools.com/nodejs/nodejs_uploadfiles.asp
+
+
+npm install formidable
+npm install express
+
+

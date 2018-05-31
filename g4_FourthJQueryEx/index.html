@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<!--
+	Shows use of an image
+-->
+	<head>
+		<title>Fourth jQuery Ex</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js">
+		</script>
+	</head>
+	<body>
+		<h1>Attributes</h1>
+		<img alt="batman" id="theImage" src="batman.gif" />
+		<script type="text/javascript">
+
+			function changeImage()
+			{
+				$("#theImage").attr("src","king kong.gif");
+				$("#theImage").attr("alt","king kong");
+			}
+			$(document).ready(
+				function()
+				{
+					setTimeout(changeImage,2000);		
+				}
+			);
+		</script>	
+	</body>
+</html>
+
+
+

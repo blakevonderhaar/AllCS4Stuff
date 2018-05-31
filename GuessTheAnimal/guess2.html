@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!--
+	Shows use of document.createElement() appendChild()
+-->
+	<head>
+		<meta charset="utf-8">
+		<title>Sixth JavaScript and Html Ex</title>
+<script>
+
+function init()
+{
+	var button = document.getElementById("addButton");
+	button.onclick = handleButtonClick;
+	var li2 = document.createElement("li");
+	var ul2 = document.getElementById("playlist");
+	li2.innerHTML = q1.print;
+	ul2.appendChild(li2);
+}
+
+function Question(print,o1,o2){
+	this.print = print;
+	this.o1 = o1;
+	this.o2 = o2;
+ }
+ 	var q1 = new Question("Do you live on land?","Do you have four legs?","Do you have a fin?");
+ 	var q2 = new Question("Do you have four legs","You are a dog","You are a worm");
+ 	var q3 = new Question("Do you have a fin?","You are a shark","You are a seal");
+
+ 	let quesAsk = 0;
+ 	var questions = [q1,q2,q3];
+
+
+
+	function handleButtonClick(){
+		
+		var textRef = document.getElementById("textInput");
+		var li = document.createElement("li");
+		var ul = document.getElementById("playlist");
+
+		if(textRef.value == "yes"){
+			li.innerHTML = questions[quesAsk].o1;
+			ul.appendChild(li);
+			quesAsk++;
+		}else if(textRef.value == "no"){
+			li.innerHTML = questions[quesAsk].o2;
+			ul.appendChild(li);	
+			quesAsk+=2;
+		}
+
+
+
+
+	
+	}
+
+window.onload = init;
+</script>
+	</head>
+	<body>
+
+<ul id="playlist">
+	<li>Your choices are : Hawk, bird, pelican, butterfly, cat, dog, ant, snake, jelly fish, stingray, cat fish, blue gail, silver dollar fish, snail, squid, and seaweed.</li>
+</ul>
+<form>
+<input type="text" id="textInput" value="">
+<input type="button" id="addButton" value="Press Me">
+</form>
+	</body>
+</html>
+

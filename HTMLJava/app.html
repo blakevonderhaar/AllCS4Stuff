@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+	<title>My Website</title>
+	<script src="code.js"></script>
+	<link rel="stylesheet" href="edit.css">
+
+	<script>
+	var theDiv = document.getElementById("myDiv");
+	console.log("This variable : " + theDiv.innerHTML);
+	theDiv.style.border = "3px solid black";
+
+
+	function doThis(){
+	var h = ["first","second","third","fourth"];
+	var things = ["Hello", "mate", "how", "areu"];
+	for(let i=0;i<things.length;i++){
+		var handle = document.getElementById(h[i]);
+		handle.innerHTML = things[i];
+		}
+	}
+	function init(){
+		alert("function is going to be called");
+
+		var button = document.getElementById("addButton");
+		button.onclick = handleButtonClick;
+	}
+	function handleButtonClick(){
+		alert("button has been selected");
+	}
+window.onload = init;	
+//window.onload = doThis;
+	</script>
+</head>
+<body>
+	<h1>A Website</h1>
+
+<p id="myDiv">HI</p>
+<p id="first">Brah</p>
+<p id="second">Bruh</p>
+<p id="third">Breh</p>
+<p id="fourth">Braeh</p>
+	
+	
+
+<form>
+<input type = "button" id = "addButton" value ="Press Me">
+</form>
+
+</body>
+</html>

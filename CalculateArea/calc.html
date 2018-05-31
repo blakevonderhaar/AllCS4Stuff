@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Calculate Area </title>
+	
+</head>
+<body>
+	<h4>Select a shape to calculate the area</h4>
+	<label for="triangle">Triangle</label>
+	<input type = "radio" id="triangle" name="shape">
+	<br>
+	<label for="square">Square</label>
+	<input type = "radio" id="square" name="shape" checked="checked">
+	<br>
+	<label for="rectangle">Rectangle</label>
+	<input type = "radio" id="rectangle" name="shape">
+	<br>
+	<br>
+
+	<input type="text" id="textInputLength" value="Length">
+	<input type="text" id="textInputWidth" value="Width" >
+	<input type="text" id="textInputHeight" value="Height">
+
+<script>
+	var sq = document.getElementById("square");
+	var rect = document.getElementById("rectangle");
+	var tri = document.getElementById("triangle");
+
+	if(sq.checked){
+		document.getElementById("textInputLength").style.visibility = "hidden";
+		document.getElementById("textInputHeight").style.visibility = "hidden";
+	}else if (rect.checked){
+
+	}else if (tri.checked){
+
+	}
+
+
+	</script>
+
+</body>
+</html>

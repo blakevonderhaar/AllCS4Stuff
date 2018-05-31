@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Client</title>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+	
+	<script>
+	function success(data){
+		alert(data.name);
+	}
+	function requestClicked(){
+		$.get("/request",{index:1},success);
+		return false;
+	}
+	$(document).ready(function(){
+		$("#requestButton").click(requestClicked);
+	});
+
+	</script>
+	<input id = "requestButton" type="button"value="Request">
+</body>
+</html>

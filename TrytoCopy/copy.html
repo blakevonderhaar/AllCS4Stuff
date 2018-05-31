@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>Try to Copy</title>
+</head>
+<body>
+
+<h1>A Basic Form</h1>
+<hr>
+<form action="#">
+	<fieldset>
+		<legend>Student Information</legend>
+		<fieldset>
+			<legend>General</legend>
+			<label for="username">Name:</label>
+			<input id="username" type="text" name="username" value="name">
+			<label for="Bdate">Birthdate:</label>
+			<input id="date" type="date" name="bdate" value="2000-01-01">
+			<label for="grade">Grade:</label>
+			<input id="grade" type="number" name="number" min = "9" max = "12" value = "10">
+		</fieldset>
+		<fieldset>
+			<legend>Contact</legend>
+			<label for="phone">Phone:</label>
+			<input id="username" type="text" name="phone" value="800-123-4567">
+			<br>
+			<br>
+			<label for="email">Email:</label>
+			<input id="email" type="text" name="email">
+		</fieldset>
+		<fieldset>
+			<legend>Personal</legend>
+			<label for="residence">Residence:</label>
+				<select id="residence" name="House">
+					<option selected="selected" value="H">House</option>
+					<option value="A">Apartment</option>
+					<option value="C">Cabin</option>
+					<option value="CA">Castle</option>
+				</select>
+				<br>
+				<label for="driverliscence">Driver Liscence</label>
+				<input type="checkbox" id="driverliscence" name="driverliscence">
+				<br>
+				<input type="radio" id="eating" name="Eating">
+				<label for="eating">Eating</label>
+				<input type="radio" id="eating" name="Eating">
+				<label for="eating">Vegan</label>
+				<input type="radio" id="eating" name="Eating">
+				<label for="eating">Vegetarian</label>
+				<input type="radio" id="eating" name="Eating"  checked = "checked">
+				<label for="eating">Omnivore</label>
+				<input type="radio" id="eating" name="Eating">
+				<label for="eating">Carnivore</label>
+		</fieldset>	
+		<label>Comment</label>
+		<br>
+		<textarea></textarea>
+		<br>
+		<input type="reset" name="reset" value="Clear Form">						
+		<input type="submit" name="send" value="Send Form">	
+
+	</fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+<!--
+	Shows use of forms.
+-->
+	<head>
+		<title>Second Forms Ex</title>
+		<script type="text/javascript" src = "jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<script>
+
+			var date = new Date();
+			var day = date.getDate();
+			var month = date.getMonth()+1;
+			var year = date.getFullYear();
+			
+			console.log(day);
+ 			console.log(month);
+ 			console.log(year);
+ 			
+ 			function clearTab() {
+ 				$("#myTable tr:not(:first)").remove();
+ 				return false;
+ 			}
+ 			function inputData(){
+
+
+ 				console.log($("#myTable tr:eq(1)").find("td:eq(6)"));
+ 				let index = -1;
+ 				$("#myTable tr").each(function() {
+ 					index++;
+ 					if(index == $("#num").val()){
+ 						$("#username").val($(this).find("td:eq(0)").text());
+		 				$("#birthdate").val($(this).find("td:eq(1)").text());
+		 				$("#grade").val($(this).find("td:eq(2)").text());
+		 				$("#phone").val($(this).find("td:eq(3)").text());
+		 				$("#email").val($(this).find("td:eq(4)").text());
+		 				$("#residence").val($(this).find("td:eq(5)").text());
+
+		 				if($(this).find("td:eq(6)").text() == "true"){
+							$("#driver").prop("checked",true);
+						}else if ($(this).find("td:eq(6)").text() == "false"){
+							$("#driver").prop("checked",false);
+						}
+
+		 				$("input[name='eating']").prop("checked",$("#myTable tr:eq(1)").find("td:eq(7)"));
+		 				
+		 				}
+ 				return false;
+ 				});
+
+
+ 				
+
+
+
+ 				//$("#myTable tr:eq(0)").each(function () {
+ 				//	$("#username").html($(this).find("td:eq(0)"));
+ 				//	console.log($(this).find("td:eq(0)").val());
+ 				//	return false;
+ 				
+ 				//});
+ 				return false;
+ 			}
+
+
+		
+		function sub () {
+			console.log($("#birthdate").val().substring(5,7));
+
+			if($("#username").val()=="" || $("#username").val()=="name"|| $("#username").val()=="Name"){
+				$("#warning").html("Please input a name");
+				return false;
+			}	 else if ($("#birthdate").val().substring(0,4) > year){
+				$("#warning").html("Please input a real birthday");
+				return false;
+			} else if ($("#birthdate").val().substring(0,4) == year && $("#birthdate").val().substring(5,7) > month){
+				$("#warning").html("Please input a real birthday");
+				return false;
+			}else if ($("#birthdate").val().substring(0,4) == year && $("#birthdate").val().substring(5,7) == month && $("#birthdate").val().substring(8,10) >= day){
+				$("#warning").html("Please input a real birthday");
+				return false;
+			}
+
+			let error = false;
+
+			$("#myTable tr").each(
+				function () {
+					if($(this).find("td:eq(0)").text() == $("#username").val()){
+						error = true;
+					}
+				}
+			);
+
+			if(error){
+				$("#warning").html("Please input a different name");
+				return false;
+			}
+
+			$("#myTable").append("<tr><td>"+$("#username").val()+
+				"</td><td>" +$("#birthdate").val()+ "</td><td>"+
+				$("#grade").val()+"</td><td>"+$("#phone").val()
+				+"</td><td>"+$("#email").val()+"</td><td>"+ 
+				$('#residence').find(":selected").text()+"</td><td>"+
+				$('#driver').is(':checked')+"</td><td>"+
+				$("input[name='eating']:checked").val()+"</td>"+
+				"</tr>");
+			$("#warning").html("");
+			return false;
+		}
+			
+		
+		</script>
+		<h1>A Basic Form</h1>
+		<hr>
+			<form action="#" onsubmit="return sub()">
+				<fieldset>
+				<legend>Student Information</legend>
+					<div>
+						<fieldset>
+						<legend>General</legend>
+
+						<label for="username">Name:</label>
+						<input id="username" type="text" name="username" value="name">
+
+						<label for="birthdate">Birthdate:</label>
+						<input id="birthdate" type="date" name="birthdate" value="2000-01-01">
+
+						<label for="grade">Grade:</label>
+						<input id="grade" type="number" name="grade" value="10" min="9" max="12">
+
+						</fieldset>
+
+					</div>
+				<fieldset>
+					<legend>Contact</legend>
+
+						<div>
+
+						<label for="phone">Phone</label>
+						<input id="phone" type="text" name="phone" value="800-123-4567">
+						<br>
+						<br>
+
+						<label for="email">E-mail</label>
+						<input type="email" name="email" id="email">
+
+
+
+                        </div>
+
+				</fieldset>
+				<fieldset>
+					<legend>Personal</legend>
+
+						<label for="residence">Residence</label>
+						<select id="residence" name="residence">
+							<option value="House">House</option>
+							<option value="Apartment">Apartment</option>
+							<option value="Cabin">Cabin</option>
+							<option value="Castle">Castle</option>
+						</select>					
+						<br>
+						<label for="driver">Driver License</label>
+						<input type="checkbox" id="driver" name="driver" value="driver">
+
+						<br>
+                        <div>
+                        	Eating:
+							<input type="radio" id="vegan" name="eating" value="vegan">
+							<label for="vegan">Vegan</label>
+							<input type="radio" id="vegetarian" name="eating" value="vegetarian">
+							<label for="vegetarian">Vegetarian</label>
+							<input type="radio" id="omnivore" name="eating" value="omnivore" checked="checked" >
+							<label for="omnivore">Omnivore</label>
+ 							<input type="radio" id="carnivore" name="eating" value="carnivore">
+							<label for="carnivore">Carnivore</label>
+                        </div>
+				</fieldset>
+
+
+                        <div for="message">Comments</div>
+						<textarea name="comments" rows="5" cols="20">
+						</textarea>
+						<br>
+
+					<input type="reset" name="reset" value="Clear Form">						
+					<input type="submit" name="send" value="Send Form" id="button">						
+
+				</fieldset>
+			</form>
+
+			<p id="warning"></p>
+			<ul id="print"></ul>
+
+
+
+			<table border = "1" id = "myTable">
+				<tr>
+					<th>Name</th>
+					<th>Birthday</th>
+					<th>Grade</th>
+					<th>Phone</th>
+					<th>Email</th>
+					<th>Residency</th>
+					<th>Drivers Liscence</th>
+					<th>Eating Habits</th>
+				</tr>
+			</table>
+
+			<input type="button" name="fill" value="Fill Data" id="button2" onclick="inputData()">
+			<input id="num" type="number" name="fillnum" value="1" min="1">
+			<input type="button" name="clear" value="Clear Table" id="button3" onclick="clearTab()">	
+
+
+	</body>
+</html>
+
+
+
+
